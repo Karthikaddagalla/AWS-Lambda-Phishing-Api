@@ -1,19 +1,21 @@
-You can install and start using it by following the below steps.
+You can install and start using above api by following the below steps.
 
 ## Step 1: Install Serverless
 ```
 npm install -g serverless
 
-serverless config credentials --provider aws --key XXXX  --secret XXXXX -o
+serverless config credentials --provider aws --key XXXX --secret XXXXX -o
+# 1st XXXX -> access key, 2nd XXXX -> secret key
 
 ```
 
 
 ## Step 2: Create Project 
 ```
-serverless create --template aws-python3 --name lambda-learn  --path lambda-learn
+serverless create --template aws-python3 --name phishing-api --path phishing-api
 
 cd  lambda-learn
+
 ```
 
 
@@ -22,8 +24,10 @@ cd  lambda-learn
 sls plugin install -n serverless-python-requirements
 
 ```
-* Clone the Repo
-* * Replace the existing handler.py and serverless.yaml with above files.
+
+* Delete handler.py and serverless.yml files in the project.
+* Clone the above Repo
+* Copy the cloned files into the project
 
 ## Step 4:  
 ```
