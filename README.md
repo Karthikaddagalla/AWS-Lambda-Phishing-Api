@@ -54,7 +54,7 @@ serverless deploy
 
 ## Want access to the api ?
 
-If you want to integrate this api into your application just mail me at karthiksatyasai7@gmail.com to get access to the already deployed api. You can check how it is working [here](https://phishing-domain-detection-gz559ebq4-karthikaddagallas-projects.vercel.app/)
+If you want to integrate this api into your application just mail me at karthiksatyasai7@gmail.com to get access to the already deployed api. You can check how it is working [here](https://phishing-domain-detection.vercel.app/)
 
 
 
