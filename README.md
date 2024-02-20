@@ -1,3 +1,18 @@
+# What does above API do ?
+
+If someone sends a url as query parameter to the above api then the api will return whether the given link is phishing or not.
+
+api_url = https://ebm56282jg.execute-api.us-west-1.amazonaws.com/phishingStage/phishingResource?url=https://github.com/Karthikaddagalla/
+response:
+```json
+{
+    "message": "Given link is Good link, if below output is 0",
+    "output": 0
+}
+```
+
+# How you can use it ?
+
 You can install and start using the above api by following the below steps.
 
 ## Step 1: Install Serverless
@@ -14,7 +29,7 @@ serverless config credentials --provider aws --key XXXX --secret XXXXX -o
 ```
 serverless create --template aws-python3 --name phishing-api --path phishing-api
 
-cd  lambda-learn
+cd  phishing-api
 
 ```
 
@@ -35,3 +50,7 @@ serverless plugin install -n serverless-python-requirements
 ```
 serverless deploy
 ```
+
+# Want access to the api ?
+
+Mail me at karthiksatyasai7@gmail.com to get access to the already deployed api
