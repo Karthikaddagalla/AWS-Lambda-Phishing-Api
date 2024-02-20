@@ -1,4 +1,4 @@
-You can install and start using above api by following the below steps.
+You can install and start using the above api by following the below steps.
 
 ## Step 1: Install Serverless
 ```
@@ -21,15 +21,17 @@ cd  lambda-learn
 
 ## Step 3: Install plugins
 ```
-sls plugin install -n serverless-python-requirements
+serverless plugin install -n serverless-python-requirements
 
 ```
+
+## Step 4:  
 
 * Delete handler.py and serverless.yml files in the project.
 * Clone the above Repo
 * Copy the cloned files into the project
 
-## Step 4:  
+## Step 5:  
 ```
-sls deploy
+serverless deploy
 ```
