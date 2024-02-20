@@ -1,3 +1,4 @@
+You can install and start using it by following the below steps.
 
 ## Step 1: Install Serverless
 ```
@@ -6,7 +7,6 @@ npm install -g serverless
 serverless config credentials --provider aws --key XXXX  --secret XXXXX -o
 
 ```
-
 
 
 ## Step 2: Create Project 
@@ -21,8 +21,9 @@ cd  lambda-learn
 ```
 sls plugin install -n serverless-python-requirements
 
-cd  lambda-learn
 ```
+* Clone the Repo
+* * Replace the existing handler.py and serverless.yaml with above files.
 
 ## Step 4:  
 ```
