@@ -7,6 +7,7 @@ import requests
 import whois
 from datetime import date
 from urllib.parse import urlparse
+import time
 
 class FeatureExtraction:
     features = []
@@ -76,6 +77,13 @@ class FeatureExtraction:
         self.features.append(self.StatsReport())
 
 
+    def measure_execution_time(self, function):
+        start_time = time.time()
+        result = function()
+        execution_time = time.time() - start_time
+        print(f"{function}: {execution_time} seconds")
+        return result
+    
      # 1.UsingIp
     def UsingIp(self):
         try:
@@ -430,13 +438,15 @@ class FeatureExtraction:
     # 27. PageRank
     def PageRank(self):
         try:
-            rank_checker_response = requests.post("https://www.checkpagerank.net/index.php", {"name": self.domain})
+            # this part of code might take alot of time to run so adding timeout
+            rank_checker_response = requests.post("https://www.checkpagerank.net/index.php", {"name": self.domain}, timeout=1)
 
             global_rank = int(re.findall(r"Global Rank: ([0-9]+)", rank_checker_response.text)[0])
             if global_rank > 0 and global_rank < 100000:
                 return 1
             return -1
-        except:
+        except Exception as e:
+            print("got exception, most probabyly timout while getting page rank: ")
             return -1
             
 
