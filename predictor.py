@@ -8,11 +8,10 @@ import numpy as np
 
 
 
-start_load_time = time.time()
+
 with open("Models/gradient_classifier_98_accuracy", "rb") as file:
     gbc = pickle.load(file)
 
-print("Pickle file loading time", time.time() - start_load_time)
 
 
 
@@ -22,14 +21,10 @@ print("Pickle file loading time", time.time() - start_load_time)
 
 def predictor(url):
 
-    start_features = time.time()
     obj = features_extractor.FeatureExtraction(url)
-    print("Feature extraction time: ", time.time()-start_features)
     x = np.array(obj.getFeaturesList()).reshape(1,30) 
 
-    start_pred = time.time()
     y_pred =gbc.predict(x)[0]
-    print("Prediction time", time.time() - start_pred)
 
 
             
